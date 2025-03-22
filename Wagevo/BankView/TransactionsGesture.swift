@@ -370,7 +370,8 @@ struct TransactionsContent: View {
             } else {
                 VStack(spacing: 0) {
                     ForEach(filteredTransactions.reversed()) { shift in
-                        NavigationLink(destination: TransactionDetailView(shift: shift)) {
+                        NavigationLink(destination: TransactionDetailView(shift: shift)
+                        ){
                             TransactionsShiftTile(shift: shift, width: mediumTileWidth)
                         }
                         .contextMenu {
@@ -434,17 +435,43 @@ fileprivate struct TransactionsShiftTile: View {
                         .padding(.leading, 12)
                 }
                 Spacer()
-                VStack {
-                    Spacer()
-                    Text("$\(String(format: "%.2f", earnings))")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(Color("AccentColor"))
-                        .padding(.trailing, 8)
-                    Spacer()
+                NavigationLink(destination: CashOutView()) {
+                    Group {
+                        if shift.isPaid {
+                            VStack {
+                                Spacer()
+                                Text("$\(String(format: "%.2f", earnings))")
+                                    .font(.title2)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color.accentColor)
+                                    .padding(.trailing, 8)
+                                Spacer()
+                            }
+                            .padding(.vertical)
+                            .padding(.trailing, 8)
+                        } else {
+                            VStack {
+                                Spacer()
+                                Text("$\(String(format: "%.2f", earnings))")
+                                    .font(.title2)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color.white)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 30)
+                                            .fill(Color.accentColor)
+                                            .frame(height: 44)
+                                            .padding(.horizontal, -10)
+                                            .offset(x: -5)
+                                    )
+                                    .padding(.trailing, 16)
+                                Spacer()
+                            }
+                            .padding(.vertical)
+                            .padding(.trailing, 16)
+                        }
+                    }
+                    
                 }
-                .padding(.vertical)
-                .padding(.trailing, 8)
             }
             .padding(.horizontal, 5)
         }

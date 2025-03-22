@@ -208,27 +208,27 @@ struct BankView: View {
                                     // Wrap the inner text in a VStack with the proper foregroundColor:
                                     VStack {
                                         HStack {
-                                            Text("Dec 17")
+                                            Text("Mar 19")
                                                 .fontWeight(.semibold)
                                             Spacer()
-                                            Text("2 hrs, 28 min")
+                                            Text("-$38.55")
                                                 .fontWeight(.regular)
                                         }
                                         .padding(.bottom, 5)
                                         .padding(.top, 35)
                                         HStack {
-                                            Text("Jan 12")
+                                            Text("Mar 15")
                                                 .fontWeight(.semibold)
                                             Spacer()
-                                            Text("4 hrs, 16 min")
+                                            Text("$72.85")
                                                 .fontWeight(.regular)
                                         }
                                         .padding(.vertical, 6)
                                         HStack {
-                                            Text("Jan 22")
+                                            Text("Mar 12")
                                                 .fontWeight(.semibold)
                                             Spacer()
-                                            Text("4 hrs, 23 min")
+                                            Text("$59.20")
                                                 .fontWeight(.regular)
                                         }
                                         .padding(.vertical, 6)
