@@ -161,7 +161,7 @@ struct SettingsView: View {
                                         .navigationTransition(.zoom(sourceID: "securityTile", in: namespace))
                                 } label: {
                                     ZStack {
-                                        smallTile(title: "Security", icon: "lock.circasdfle.fill", width: smallTileWidth)
+                                        smallTile(title: "Security", icon: "lock.circle.fill", width: smallTileWidth)
                                             .matchedTransitionSource(id: "securityTile", in: namespace)
                                         VStack {
                                             Spacer()
@@ -184,7 +184,7 @@ struct SettingsView: View {
                                         .navigationTransition(.zoom(sourceID: "helpTile", in: namespace))
                                 } label: {
                                     ZStack {
-                                        smallTile(title: "Help", icon: "questionmark.cirasdfcle.fill", width: smallTileWidth)
+                                        smallTile(title: "Help", icon: "questionmark.circle.fill", width: smallTileWidth)
                                             .matchedTransitionSource(id: "helpTile", in: namespace)
                                         VStack {
                                             Spacer()

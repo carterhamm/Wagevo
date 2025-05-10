@@ -17,7 +17,7 @@ struct Shift: Codable, Identifiable {
     let endTime: Date
     let duration: TimeInterval
     let user_id: String
-    var isPaid: Bool = false
+    var isPaid: Bool = true
     
     var id: String { shift_id }
 }
