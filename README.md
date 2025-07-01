@@ -1,4 +1,4 @@
-💸 Wagevo
+💸 **Wagevo**
 
 Wagevo is transforming payday! Forget waiting weeks for your paycheck—Wagevo integrates directly with your company’s time clock system, instantly delivering earned wages right after each shift. No more waiting, no hassle—just immediate access to the money you’ve earned. 🚀
 
